@@ -9,7 +9,7 @@ Collaborators
 Joshua "MrSchism" Embrey (CIT.BS; Information Security)  
 	<<mrschism@sdf.org>>  
 	
-Joseph "Arcarna" Preston (CIT.BS; Information Security)  
+Joseph "Arcarna" Preston (CIT.BS; Software Development)  
 	<<jpreston86@gmail.com>>  
    
 -------------------------------------------------------------------------------------------------------
