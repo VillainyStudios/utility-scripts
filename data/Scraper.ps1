@@ -3,7 +3,7 @@
 #   Joshua "MrSchism" Embrey [mrschism@sdf.org]
 #   Joseph "Arcarna" Preston [jpreston86@gmail.com]
 # Intial commit: February 10, 2014 (20140210)
-# Current version: February 11, 2014(20140211)
+# Current version: April 9, 2014(20140409)
 #
 # Purpose:	File scraper checks a file selected by the user and		  
 # 		searches for all instances of a string or values supplied 
@@ -20,10 +20,19 @@ $valid = 1,"string",2,"RegEx"  # Allowed responses
 $result = ""                   # Output results
 $output = ""                   # How to output the results
 $again = ""                    # Search for another string
-
+$outfile = ""                  # Output file
+$reply = ""                    # Generic reply; changes if needed.
 
 # Formatting for the output
 $format = @{expression={$_.linenumber};label="Line";width=5},@{expression={$_.line};label="Data"}
+
+# Function for asking about save location
+function save-location {
+    echo "Where would you like to save your results?"
+    $script:outfile = read-host  
+    echo "Saving results to $script:outfile"
+    $result >> $script:outfile 
+}
 
 # Main loop
 cls
@@ -99,6 +108,28 @@ while ($cycle -eq "yes") {
     
     
     }
+    
+    $output = read-host "Do you want to save your results to a file? (y/n)"
+    if ($output -eq "y"){
+        if ($outfile -ne "") {
+            echo "Would you like to use your previous file of..."
+            echo $outfile
+            $reply = read-host "(y/n)"
+            if ($reply -eq "y") {
+                echo "Saving results to $outfile"
+                $result >> $outfile
+            }
+            else {
+                save-location
+            }
+        }
+        
+        else {
+            save-location
+        }
+        
+    }
+    
     
     # Prompt to search again or exit
     echo "--------------------------------------------------"
