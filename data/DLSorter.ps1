@@ -134,10 +134,7 @@ else {
                 }
             }
         }
-    
     }
-
-
 
     # No place like home
     pop-location
@@ -172,7 +169,6 @@ else {
                 sleep 2
             }
         }
-
     }
     if (($args[0] -eq "-v") -or ($args[0] -eq "/v")) {
         v1
@@ -180,5 +176,4 @@ else {
     elseif (($args[0] -eq "-vv") -or ($args[0] -eq "/vv")) {
         v2
     }
-
 }
