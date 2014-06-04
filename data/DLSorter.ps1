@@ -22,16 +22,40 @@ foreach ($i in ls) {
     
     switch ($i.extension) {
         {$img -contains $_} {
-            mv $i -Destination "~\Pictures"
+            $chk = test-path "~\Pictures\$i"
+            if ($chk -eq $true) {
+                echo "A file named $i already exists in ~\Pictures."
+                }
+            elseif ($chk -eq $false) {
+                mv $i -Destination "~\Pictures"
+            }
         }
         {$vid -contains $_} {
-            mv $i -Destination "~\Videos"
+            $chk = test-path "~\Videos\$i"
+            if ($chk -eq $true) {
+                echo "A file named $i already exists in ~\Videos."
+                }
+            elseif ($chk -eq $false) {
+                mv $i -Destination "~\Videos"
+            }
         }
         {$mus -contains $_} {
-            mv $i -Destination "~\Music"
+            $chk = test-path "~\Music\$i"
+            if ($chk -eq $true) {
+                echo "A file named $i already exists in ~\Music."
+                }
+            elseif ($chk -eq $false) {
+                mv $i -Destination "~\Music"
+            }
         }
         {$doc -contains $_} {
-            mv $i -Destination "~\Documents"
+            $chk = test-path "~\Documents\$i"
+            if ($chk -eq $true) {
+                echo "A file named $i already exists in ~\Documents."
+                }
+            elseif ($chk -eq $false) {
+                mv $i -Destination "~\Documents"
+            }
         }
     }
     
