@@ -1,15 +1,13 @@
-Warez
-==========
-
-Tools for University students, by University students.
+Utility Scripts
+===============
 
 Collaborators
 -------------
 
-Joshua "MrSchism" Embrey (CIT.BS; Information Security)  
+Joshua "MrSchism" Embrey  
 	<<mrschism@sdf.org>>  
 	
-Joseph "Arcarna" Preston (CIT.BS; Software Development)  
+Joseph "Arcarna" Preston 
 	<<jpreston86@gmail.com>>  
    
 -------------------------------------------------------------------------------------------------------
@@ -17,7 +15,7 @@ Want to add your name to the list?  Working on a nifty tool?  Email MrSchism to 
 
 Tools
 -----
-1. Task Manager Toggler - A tool to enable/disable task manager while not in the FSoT labs
+1. Task Manager Toggler - A tool to enable/disable task manager
 2. Clipboard Logger - A tool for logging clipboard data; great for collecting references and quotes without worry.
 3. File Scraper - A tool used to search for and return data in documents
 
